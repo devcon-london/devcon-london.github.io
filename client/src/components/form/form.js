@@ -4,12 +4,9 @@ import React from 'react';
 import FieldList from '../field-list/field-list.js';
 
 export default React.createClass({
-
 	loadDataFromServer() {
-		var url = 'http://localhost:8080/api/google-form?formId=' + this.props.id;
-
 	  $.ajax({
-	    url: url,
+	    url: 'http://localhost:8080/api/google-form?formId=' + this.props.id,
 	    dataType: 'json',
 	    success: function(data) {
 	    	console.log('success -> ', data);
@@ -21,12 +18,6 @@ export default React.createClass({
 	  });
 	},
 
-	submitForm(e) {
-		e.preventDefault();
-		var submitUrl = 'https://docs.google.com/a/peduarte.com/' + this.props.id + '/formResponse';
-		console.log('submitUrl -> ', submitUrl);
-	},
-
 	getInitialState() {
 		return {data: []};
 	},
@@ -36,9 +27,9 @@ export default React.createClass({
 	},
 
   render() {
-  	console.log('<Form> – this.state.data -> ', this.state.data);
+		var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
     return (
-      <form className="Form"  onSubmit={this.submitForm}>
+      <form className="Form"  action={submitUrl}>
       	<FieldList fields={this.state.data} />
       </form>
     )

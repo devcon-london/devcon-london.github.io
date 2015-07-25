@@ -4,8 +4,8 @@ var app = express();
 var request = require('request');
 var cheerio = require('cheerio');
 
+var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/';
 var PORT = process.env.PORT || 8080;
-var GOOGLE_FORM_URL = 'https://docs.google.com/a/peduarte.com/forms/d/';
 
 app.use(cors());
 
