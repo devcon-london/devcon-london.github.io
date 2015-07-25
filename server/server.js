@@ -15,10 +15,10 @@ function scrapeForm(formId, callback) {
       var $ = cheerio.load(html);
       var $form = $('#ss-form');
 
-      var parsedResults = [{ formUrl: $form.attr('action')}];
+      var parsedResults = { formActionUrl: $form.attr('action'), formElements: []};
 
       $('#ss-form .ss-item').each(function(i, element) {
-        parsedResults.push({element: $(this).html()});
+        parsedResults.formElements.push($(this).html());
       });
 
       return callback(parsedResults);
@@ -29,7 +29,7 @@ function scrapeForm(formId, callback) {
 app.get('/api/google-form', function(req, res) {
   if (req.query.formId) {
     scrapeForm(req.query.formId, function(data) {
-      res.json({ data: data });
+      res.json(data);
     });
   }
 });

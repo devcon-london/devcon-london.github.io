@@ -1,16 +1,15 @@
 import './form.css';
 
 import React from 'react';
+import FieldList from '../field-list/field-list.js';
 
 export default React.createClass({
 
-	getInitialState() {
-		return {data: []};
-	},
+	loadDataFromServer() {
+		var url = 'http://localhost:8080/api/google-form?formId=' + this.props.id;
 
-	componentDidMount() {
 	  $.ajax({
-	    url: 'http://localhost:8080/api/google-form?formId=' + this.props.id,
+	    url: url,
 	    dataType: 'json',
 	    success: function(data) {
 	    	console.log('success -> ', data);
@@ -22,11 +21,23 @@ export default React.createClass({
 	  });
 	},
 
+	getInitialState() {
+		return {data: [
+			'1',
+			'2',
+			'3'
+		]};
+	},
+
+	componentDidMount() {
+		// this.loadDataFromServer();
+	},
+
   render() {
-  	console.log('Render() -> ', this.state.data);
+  	console.log('<Form> – this.state.data -> ', this.state.data);
     return (
       <form className="form">
-        <input type="text" />
+      	<FieldList fields={this.state.data} />
       </form>
     )
   }
