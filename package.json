@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./node_modules/.bin/NODE_ENV=production webpack",
     "dev": "node client/webpack-server.js",
-    "server": "node server/server.js"
+    "server": "node server/index.js"
   },
   "repository": {
     "type": "git",
