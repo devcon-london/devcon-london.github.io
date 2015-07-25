@@ -13,7 +13,7 @@ export default React.createClass({
 	  });
 
     return (
-    	<div>
+    	<div className="FieldList">
     		{fieldNodes}
     	</div>
     )

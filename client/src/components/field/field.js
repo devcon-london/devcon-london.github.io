@@ -1,3 +1,5 @@
+import './field.css';
+
 import React from 'react';
 
 export default React.createClass({
@@ -7,7 +9,7 @@ export default React.createClass({
   	console.log('<Field> – this.props.data -> ', this.props.data)
 
     return (
-    	<input type="text" placeholder={this.props.key} />
+    	<div className="Field" dangerouslySetInnerHTML={{__html: this.props.data.html}}></div>
     )
   }
 });

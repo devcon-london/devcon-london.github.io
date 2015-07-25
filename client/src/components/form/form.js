@@ -21,22 +21,24 @@ export default React.createClass({
 	  });
 	},
 
+	submitForm(e) {
+		e.preventDefault();
+		var submitUrl = 'https://docs.google.com/a/peduarte.com/' + this.props.id + '/formResponse';
+		console.log('submitUrl -> ', submitUrl);
+	},
+
 	getInitialState() {
-		return {data: [
-			'1',
-			'2',
-			'3'
-		]};
+		return {data: []};
 	},
 
 	componentDidMount() {
-		// this.loadDataFromServer();
+		this.loadDataFromServer();
 	},
 
   render() {
   	console.log('<Form> – this.state.data -> ', this.state.data);
     return (
-      <form className="form">
+      <form className="Form"  onSubmit={this.submitForm}>
       	<FieldList fields={this.state.data} />
       </form>
     )

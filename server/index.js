@@ -15,10 +15,17 @@ function scrapeForm(formId, callback) {
       var $ = cheerio.load(html);
       var $form = $('#ss-form');
 
-      var parsedResults = { formActionUrl: $form.attr('action'), formElements: []};
+      var parsedResults = [];
 
       $('#ss-form .ss-item').each(function(i, element) {
-        parsedResults.formElements.push($(this).html());
+
+      	var obj = {
+      		title: $('.ss-q-title', this).text(),
+      		helpText: $('.ss-secondary-text', this).text(),
+      		html: $(this).html()
+      	};
+
+        parsedResults.push(obj);
       });
 
       return callback(parsedResults);
