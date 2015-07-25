@@ -1,3 +1,65 @@
 .Field {
-	margin: 20px 0;
+	margin: 40px 0;
+}
+
+.Field input,
+.Field textarea {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
+	background: #111;
+	color: #666;
+	border: none;
+	padding: 20px 10px;
+	width: 100%;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+.Field input[type="submit"] {
+	background-color: #ffeb3b;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #000;
+	border-bottom: 5px solid #C0B00F;
+	margin: 0;
+	margin-top: 35px;
+}
+
+.Field input[type="submit"]:focus,
+.Field input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #C0B00F;
+	color: #000;
+}
+
+.Field input[type="submit"]:active {
+	border: transparent;
+	background-color: #ffeb3b;
+	color: #000;
+}
+
+.Field input:focus,
+.Field textarea:focus {
+	outline: 0;
+	color: #fff;
+	background-color: #000;
+}
+
+.Field .ss-secondary-text {
+	color: #666;
+	font-weight: 400;
+}
+
+.Field .ss-secondary-text:first-letter {
+	text-transform: uppercase;
+}
+
+.Field .required-message,
+.Field .error-message,
+.Field .ss-password-warning {
+	display: none;
+}
+
+.Field #navigation-table,
+.Field #navigation-table td {
+	width: 100%;
 }
