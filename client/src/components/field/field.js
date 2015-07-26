@@ -6,7 +6,7 @@ export default React.createClass({
 
   render() {
     return (
-    	<div className="Field" dangerouslySetInnerHTML={{__html: this.props.data.html}}></div>
+      <div className="Field" dangerouslySetInnerHTML={{__html: this.props.data.html}}></div>
     )
   }
 });
