@@ -2,23 +2,26 @@
 	margin: 40px 0;
 }
 
-.Field input:not([type="radio"]):not([type="checkbox"]),
+.Field input[type="text"],
+.Field input[type="email"],
+.Field input[type="submit"],
 .Field textarea {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
 	background: #111;
 	color: #666;
-	border: none;
-	padding: 20px 10px;
-	width: 100%;
 	font-size: 24px;
 	margin-top: 10px;
+	padding: 20px 10px;
+	width: 100%;
+	border: none;
+	border-radius: none;
 	-webkit-appearance: none;
 }
 
 .Field input[type="submit"] {
-	background-color: #ffeb3b;
-	text-transform: uppercase;
 	font-weight: 700;
+	text-transform: uppercase;
+	background-color: #ffeb3b;
 	color: #000;
 	border-bottom: 5px solid #C0B00F;
 	margin: 0;
@@ -27,22 +30,22 @@
 
 .Field input[type="submit"]:focus,
 .Field input[type="submit"]:hover {
-	cursor: pointer;
 	background-color: #C0B00F;
 	color: #000;
+	cursor: pointer;
 }
 
 .Field input[type="submit"]:active {
-	border: transparent;
 	background-color: #ffeb3b;
 	color: #000;
+	border: transparent;
 }
 
 .Field input:focus,
 .Field textarea:focus {
-	outline: 0;
-	color: #fff;
 	background-color: #000;
+	color: #fff;
+	outline: 0;
 }
 
 .Field .ss-secondary-text {
