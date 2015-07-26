@@ -2,7 +2,7 @@
 	margin: 40px 0;
 }
 
-.Field input:not(type=[radio]):not(type=[checkbox]),
+.Field input:not([type="radio"]):not([type="checkbox"]),
 .Field textarea {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
 	background: #111;
