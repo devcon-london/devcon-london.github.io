@@ -12,6 +12,7 @@
 	width: 100%;
 	font-size: 24px;
 	margin-top: 10px;
+	-webkit-appearance: none;
 }
 
 .Field input[type="submit"] {
