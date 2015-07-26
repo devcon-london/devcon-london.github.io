@@ -3,13 +3,12 @@ import './form.css';
 import React from 'react';
 import FieldList from '../field-list/field-list.js';
 
-var endpoint = 'http://localhost:8080/api/google-form?formId=';
-var endpointProd = 'https://devconlondon-api.herokuapp.com/api/google-form?formId=';
+var endpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8080/api/google-form?formId=' : 'https://devconlondon-api.herokuapp.com/api/google-form?formId=';
 
 export default React.createClass({
 	loadDataFromServer() {
 	  $.ajax({
-	    url: endpointProd + this.props.id,
+	    url: endpoint + this.props.id,
 	    dataType: 'json',
 	    success: function(data) {
 	    	$('#loading').hide();
