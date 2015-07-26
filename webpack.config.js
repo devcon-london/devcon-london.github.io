@@ -12,7 +12,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     './client/src/app',
-    './client/src/index.html'
+    './client/src/index.html',
   ],
 
   output: {
@@ -36,6 +36,10 @@ module.exports = {
     loaders: [{
       test: /\.html?$/,
       loaders: ['html-loader', 'file-loader?name=[name].[ext]']
+    },
+    {
+      test: '\CNAME\b',
+      loader: 'file-loader'
     },
     {
       test: /\.js?$/,

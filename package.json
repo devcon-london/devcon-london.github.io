@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "./node_modules/.bin/NODE_ENV=production webpack",
+    "deploy": "npm run build && cp CNAME dist/ && ship dist -to gh-pages",
     "dev": "node client/webpack-server.js",
     "server": "node server/index.js"
   },

@@ -3,13 +3,16 @@ import './form.css';
 import React from 'react';
 import FieldList from '../field-list/field-list.js';
 
+var endpoint = 'http://localhost:8080/api/google-form?formId=';
+var endpointProd = 'https://devconlondon-api.herokuapp.com/api/google-form?formId=';
+
 export default React.createClass({
 	loadDataFromServer() {
 	  $.ajax({
-	    url: 'http://localhost:8080/api/google-form?formId=' + this.props.id,
+	    url: endpointProd + this.props.id,
 	    dataType: 'json',
 	    success: function(data) {
-	    	console.log('success -> ', data);
+	    	$('#loading').hide();
 	      this.setState({data: data});
 	    }.bind(this),
 	    error: function(xhr, status, err) {
@@ -30,6 +33,7 @@ export default React.createClass({
 		var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
     return (
       <form className="Form"  action={submitUrl}>
+      	<p id="loading">Loading... :)</p>
       	<FieldList fields={this.state.data} />
       </form>
     )
