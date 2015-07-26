@@ -33,6 +33,10 @@ function scrapeForm(formId, callback) {
   });
 }
 
+app.get('/', function(req, res) {
+	res.send('Nothing to see here ¯\\_(ツ)_/¯');
+});
+
 app.get('/api/google-form', function(req, res) {
   if (req.query.formId) {
     scrapeForm(req.query.formId, function(data) {
