@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "42f6fb7cd0826f1859b0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5f1dfd83fc0edabf47cf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21295,7 +21295,6 @@
 	  displayName: 'field-list',
 	
 	  render: function render() {
-	    console.log('<FieldList> – this.props.fields -> ', this.props.fields);
 	    var fieldNodes = this.props.fields.map(function (field, index) {
 	      return _react2['default'].createElement(
 	        'div',
