@@ -22,11 +22,17 @@ gh-pages:
   branch: master
 ```
 and then run:
-`npm run deploy-client`
+```
+npm run deploy-client
+```
 
 ## Server deployment
 The server (api) is hosted on Heroku. To be able to deploy you need to install the Heroku Toolbelt: https://toolbelt.heroku.com/ and get permissions (@peduarte is currently the owner of the Heroku app).
 then, add new heroku remote:
-`heroku git:remote -a devconlondon`
+```
+heroku git:remote -a devconlondon
+```
 and finally:
-`npm run deploy-server`
+```
+npm run deploy-server
+```
