@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2fb2272a6de58758af6b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "098c4c8cbf8546d040e4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21195,7 +21195,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
-		value: true
+	  value: true
 	});
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -21210,46 +21210,46 @@
 	
 	var _fieldListFieldListJs2 = _interopRequireDefault(_fieldListFieldListJs);
 	
-	var endpoint =  false ? 'http://localhost:8080/api/google-form?formId=' : 'https://devconlondon-api.herokuapp.com/api/google-form?formId=';
+	var endpoint =  false ? 'http://localhost:8080/api/google-form?formId=' : 'https://devconlondon.herokuapp.com/api/google-form?formId=';
 	
 	exports['default'] = _react2['default'].createClass({
-		displayName: 'form',
+	  displayName: 'form',
 	
-		loadDataFromServer: function loadDataFromServer() {
-			$.ajax({
-				url: endpoint + this.props.id,
-				dataType: 'json',
-				success: (function (data) {
-					$('#loading').hide();
-					this.setState({ data: data });
-				}).bind(this),
-				error: (function (xhr, status, err) {
-					console.error(status, err.toString());
-				}).bind(this)
-			});
-		},
+	  loadDataFromServer: function loadDataFromServer() {
+	    $.ajax({
+	      url: endpoint + this.props.id,
+	      dataType: 'json',
+	      success: (function (data) {
+	        $('#loading').hide();
+	        this.setState({ data: data });
+	      }).bind(this),
+	      error: (function (xhr, status, err) {
+	        console.error(status, err.toString());
+	      }).bind(this)
+	    });
+	  },
 	
-		getInitialState: function getInitialState() {
-			return { data: [] };
-		},
+	  getInitialState: function getInitialState() {
+	    return { data: [] };
+	  },
 	
-		componentDidMount: function componentDidMount() {
-			this.loadDataFromServer();
-		},
+	  componentDidMount: function componentDidMount() {
+	    this.loadDataFromServer();
+	  },
 	
-		render: function render() {
-			var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
-			return _react2['default'].createElement(
-				'form',
-				{ className: "Form", action: submitUrl },
-				_react2['default'].createElement(
-					'p',
-					{ id: "loading" },
-					'Loading... :)'
-				),
-				_react2['default'].createElement(_fieldListFieldListJs2['default'], { fields: this.state.data })
-			);
-		}
+	  render: function render() {
+	    var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
+	    return _react2['default'].createElement(
+	      'form',
+	      { className: "Form", action: submitUrl },
+	      _react2['default'].createElement(
+	        'p',
+	        { id: "loading" },
+	        'Loading... :)'
+	      ),
+	      _react2['default'].createElement(_fieldListFieldListJs2['default'], { fields: this.state.data })
+	    );
+	  }
 	});
 	module.exports = exports['default'];
 
@@ -21296,11 +21296,7 @@
 	
 	  render: function render() {
 	    var fieldNodes = this.props.fields.map(function (field, index) {
-	      return _react2['default'].createElement(
-	        'div',
-	        null,
-	        _react2['default'].createElement(_fieldFieldJs2['default'], { data: field, key: index })
-	      );
+	      return _react2['default'].createElement(_fieldFieldJs2['default'], { data: field, key: index });
 	    });
 	
 	    return _react2['default'].createElement(
