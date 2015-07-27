@@ -12,7 +12,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devcon-london/devcon-london.github.io.git"
-    "url": "git+https://github.com/peduarte/London-Housing-Headline.git"
   },
   "author": {
     "name": "Pedro Duarte",
