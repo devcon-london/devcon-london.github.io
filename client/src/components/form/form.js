@@ -31,7 +31,7 @@ export default React.createClass({
   render() {
     var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
     return (
-      <form className="Form"  action={submitUrl}>
+      <form className="Form" action={submitUrl}>
         <p id="loading">Loading... :)</p>
         <FieldList fields={this.state.data} />
       </form>
