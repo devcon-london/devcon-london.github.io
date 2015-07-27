@@ -1,15 +1,21 @@
 # DevCon develop branch
 
 ## Install Local deps
-`npm install`
+```
+npm install
+```
 
 Run all npm commands from root!
 
 ## Run client
-`npm run dev`
+```
+npm run dev
+```
 
 ## Run server (api)
-`npm run server`
+```
+npm run server
+```
 
 ## Client deployment
 The client is hosted on Github pages (master branch)
