@@ -25,7 +25,7 @@ To be able to deploy, you need to create a `ship.conf` file with:
 ```
 gh-pages:
   username: <username>
-  password: "<password>"
+  password: <password>
   repo: devcon-london/devcon-london.github.io
   branch: master
 ```
