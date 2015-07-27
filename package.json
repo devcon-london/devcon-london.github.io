@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack -d --config webpack.prod.config.js --profile --progress --colors",
     "deploy": "npm run build && cp CNAME dist/ && ship dist -to gh-pages",
+    "deploy-server": "git push heroku develop:master",
     "dev": "node client/webpack-server.js",
     "server": "node server/index.js",
     "start": "node server/index.js"
