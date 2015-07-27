@@ -38,10 +38,6 @@ module.exports = {
       loaders: ['html-loader', 'file-loader?name=[name].[ext]']
     },
     {
-      test: '\CNAME\b',
-      loader: 'file-loader'
-    },
-    {
       test: /\.js?$/,
       exclude: /node_modules/,
       loaders: ['react-hot', 'babel-loader']

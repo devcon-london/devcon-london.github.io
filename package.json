@@ -1,24 +1,30 @@
 {
-  "name": "london-housing-headlines",
+  "name": "devcon-london",
   "version": "1.0.0",
-  "description": "London Housing Headlines",
-  "main": "app.js",
+  "description": "DevCon London",
+  "main": "client/src/app.js",
   "scripts": {
     "build": "webpack -d --config webpack.prod.config.js --profile --progress --colors",
-    "deploy": "npm run build && cp CNAME dist/ && ship dist -to gh-pages",
+    "deploy-client": "npm run build && cp CNAME dist/ && ship dist -to gh-pages",
+    "deploy-server": "git push heroku develop:master",
     "dev": "node client/webpack-server.js",
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peduarte/London-Housing-Headline.git"
+    "url": "git+https://github.com/devcon-london/devcon-london.github.io.git"
   },
-  "author": "Pedro Duarte",
+  "author": {
+    "name": "Pedro Duarte",
+    "email": "contact@peduarte.com",
+    "url": "http://pedroduarte.me"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/peduarte/London-Housing-Headline/issues"
+    "url": "https://github.com/devcon-london/devcon-london.github.io/issues"
   },
-  "homepage": "https://github.com/peduarte/London-Housing-Headline#readme",
+  "homepage": "https://github.com/devcon-london/devcon-london.github.io/#readme",
   "private": true,
   "devDependencies": {
     "babel-core": "^5.6.15",

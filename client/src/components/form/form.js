@@ -3,7 +3,7 @@ import './form.css';
 import React from 'react';
 import FieldList from '../field-list/field-list.js';
 
-var endpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8080/api/google-form?formId=' : 'https://devconlondon-api.herokuapp.com/api/google-form?formId=';
+var endpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:8080/api/google-form?formId=' : 'https://devconlondon.herokuapp.com/api/google-form?formId=';
 
 export default React.createClass({
   loadDataFromServer() {
@@ -31,7 +31,7 @@ export default React.createClass({
   render() {
     var submitUrl = 'https://docs.google.com/forms/d/' + this.props.id + '/formResponse';
     return (
-      <form className="Form"  action={submitUrl}>
+      <form className="Form" action={submitUrl}>
         <p id="loading">Loading... :)</p>
         <FieldList fields={this.state.data} />
       </form>
