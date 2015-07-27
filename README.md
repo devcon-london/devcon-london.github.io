@@ -11,11 +11,13 @@ Run all npm commands from root!
 ```
 npm run dev
 ```
+Client runs on http://localhost:3000
 
 ## Run server (api)
 ```
 npm run server
 ```
+Server runs on http://localhost:8080
 
 ## Client deployment
 The client is hosted on Github pages (master branch)
