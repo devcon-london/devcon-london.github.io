@@ -1,0 +1,21 @@
+Resources Copy (Example)
+
+- Events:
+	- React for everyone
+		- Brief explanation of this event, and link to the presentation
+	- WebGl
+		- Brief explanation of this event, and link to the presentation
+
+
+- Education:
+	- React
+		- online course link
+		- paterns explanation
+		- Best practices
+	- WebGl
+		- online course link
+		- paterns explanation
+		- Best practices
+	- Servers
+		- AWS
+		- digitalocean
