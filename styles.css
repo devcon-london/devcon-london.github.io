@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 * {padding:0;margin:0;box-sizing:border-box}
 body {background:#222;color:#999;padding:60px 1pc;max-width:40pc;margin:0 auto;font-family:Montserrat,Helvetica Neue,Helvetica,Arial;font-size:14px;line-height:1.6;font-weight:700}
 h1, a, a:visited {color:#fff}
